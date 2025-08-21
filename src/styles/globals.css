@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sonar: 0 0 0 2px rgba(34, 211, 238, 0.2), 0 0 40px rgba(34,211,238,0.08) inset;
+}
+
+html, body {
+  background: #0B1D2A;
+  color: #C2D7E1;
+}
+
+.ocean-card {
+  @apply bg-surface/90 backdrop-blur border border-borderdark rounded-2xl shadow;
+}
+
+.ocean-button {
+  @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium bg-brand text-white hover:bg-brandHover focus:outline-none focus:ring-2 focus:ring-brandRing;
+}
+
+.ocean-outline {
+  @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium border border-brandRing text-cyan-200 hover:bg-cyan-900/10;
+}
+
+.sonar-glow {
+  box-shadow: var(--sonar);
+}
