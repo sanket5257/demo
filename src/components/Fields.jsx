@@ -1,23 +1,28 @@
 "use client";
 import { motion } from "framer-motion";
+import { FishSymbol, Activity, Search, BarChart } from "lucide-react";
 
 export default function Fields() {
   const items = [
     {
       title: "Underwater Defence",
       desc: "Autonomous surveillance, threat detection and countermeasures.",
+      icon: <FishSymbol className="size-10 text-brand" />,
     },
     {
       title: "AI & Autonomy",
       desc: "Real-time perception, control loops and mission planning.",
+      icon: <Activity className="size-10 text-brand" />,
     },
     {
       title: "Search & Rescue",
       desc: "Rapid deployment, comms relays and surface beacons.",
+      icon: <Search className="size-10 text-brand" />,
     },
     {
       title: "Data & Analytics",
       desc: "Sonar fusion, bathymetry, and geospatial insights.",
+      icon: <BarChart className="size-10 text-brand" />,
     },
   ];
 
@@ -82,7 +87,9 @@ export default function Fields() {
               whileHover={{ y: -6, scale: 1.03 }}
               className="ocean-card p-6 transition-all cursor-pointer"
             >
-              <div className="size-10 rounded-lg bg-brand/20 border border-brandRing mb-4" />
+              <div className="size-10 rounded-lg border border-brandRing mb-4 flex items-center justify-center text-brand">
+                {it.icon}
+              </div>
               <h3 className="text-heading font-semibold">{it.title}</h3>
               <p className="mt-2 text-sm text-body">{it.desc}</p>
             </motion.div>
