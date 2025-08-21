@@ -12,7 +12,7 @@ const PRODUCT_CATEGORIES = [
     products: [
       {
         name: "Autonomous Underwater Drone - Pralay 1",
-        image: "/images/product-drone.jpg",
+        image: "/images/Pralay 1/1000052458.jpg",
         summary: "AI-based ship detection and stealth surveillance.",
         description:
           "Pralay 1 is designed for stealth surveillance, virtual anchoring, and advanced navigation. It leverages AI for ship detection and underwater monitoring.",
@@ -25,7 +25,7 @@ const PRODUCT_CATEGORIES = [
       },
       {
         name: "Drone Catcher - Net Thrower",
-        image: "/images/product-catcher.jpg",
+        image: "/images/Drone Catcher/drone-catcher.png",
         summary: "Modular net-throwing drone countermeasure.",
         description:
           "A modular net-throwing countermeasure system with 10m range, portable design, and reusability for tactical defence.",
@@ -33,7 +33,7 @@ const PRODUCT_CATEGORIES = [
       },
       {
         name: "GT Airborne RGES",
-        image: "/images/product-airborne.jpg",
+        image: "/images/RGES/Untitled design.png",
         summary: "Aerial system to entangle vessel propulsion.",
         description:
           "RGES provides a 30m aerial system for entangling vessel propulsion. Corrosion-resistant, non-lethal, and field tested.",
