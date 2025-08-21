@@ -23,7 +23,7 @@ export default function Navbar() {
       <nav className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         {/* Logo / Brand */}
         <div className="flex items-center gap-3">
-          <div className="size-9 rounded-xl bg-brand/20 border border-brandRing shadow-glow" />
+          {/* <div className="size-9 rounded-xl bg-brand/20 border border-brandRing shadow-glow" /> */}
           <span className="text-heading font-bold tracking-wide text-lg drop-shadow-[0_0_6px_rgba(6,182,212,0.6)] uppercase">
             GOFLOAT <span className="text-brand">TECHNOLOGIES</span>
           </span>

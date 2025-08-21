@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,7 +10,7 @@ export default function Footer() {
           <h3 className="text-heading font-semibold text-lg mb-4">
             GOFLOAT TECHNOLOGIES
           </h3>
-          <p className="text-sm text-muted leading-relaxed">
+          <p className="text-sm text-muted leading-relaxed mb-4">
             Pioneering the future of underwater defense and surveillance systems.
           </p>
         </div>
@@ -21,52 +21,66 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>
               <a href="/products" className="hover:text-brand transition">
-                AUV Seeker
+                GoFloat Defence
               </a>
             </li>
             <li>
               <a href="/products" className="hover:text-brand transition">
-                Guardian Buoy
+                GoFloat LSA
               </a>
             </li>
             <li>
               <a href="/products" className="hover:text-brand transition">
-                SonarIQ Suite
+                GoFloat AI
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Column 3 - Resources */}
+        {/* Column 3 - Quick Links */}
         <div>
-          <h4 className="text-heading font-semibold mb-3">Resources</h4>
+          <h4 className="text-heading font-semibold mb-3">Quick links</h4>
           <ul className="space-y-2 text-sm">
             <li>
+              <a href="/" className="hover:text-brand transition">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/product" className="hover:text-brand transition">
+                Product
+              </a>
+            </li>
+            <li>
               <a href="/about" className="hover:text-brand transition">
-                About Us
+                About
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-brand transition">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-brand transition">
-                Support
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-brand transition">
-                Careers
+                Contact
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Column 4 - Social */}
+        {/* Column 4 - Contact & Social */}
         <div>
-          <h4 className="text-heading font-semibold mb-3">Follow Us</h4>
+          <h4 className="text-heading font-semibold mb-3">Contact & Follow Us</h4>
+          <div className="text-sm text-muted space-y-3 mb-3">
+            <div className="flex items-center gap-2">
+              <MapPin className="w-10 h-10" />
+              <span>6th Floor,Agnel Technical Complex,Sector 9A,Vashi, Navi Mumbai, Maharashtra 400703</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone className="w-4 h-4" />
+              <span>+91 82374 64373</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail className="w-4 h-4" />
+              <span>info@gofloat.tech</span>
+            </div>
+          </div>
           <div className="flex gap-4">
             <a href="#" className="text-muted hover:text-brand transition">
               <Github className="w-5 h-5" />
@@ -89,19 +103,16 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-borderdark">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-sm text-muted">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-sm text-muted text-center sm:text-left">
             © {new Date().getFullYear()} GOFLOAT TECHNOLOGIES. All rights reserved.
           </p>
-          <div className="flex gap-4 text-xs">
+          <div className="flex gap-4 text-xs justify-center sm:justify-start">
             <a className="hover:text-brand transition" href="#">
               Privacy
             </a>
             <a className="hover:text-brand transition" href="#">
               Terms
-            </a>
-            <a className="hover:text-brand transition" href="#contact">
-              Contact
             </a>
           </div>
         </div>

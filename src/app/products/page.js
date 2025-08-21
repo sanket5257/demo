@@ -3,7 +3,6 @@ import { useState } from "react";
 import Navbar from "../../components/Navbar";
 import ProductCard from "../../components/ProductCard";
 import ProductModal from "../../components/ProductModal";
-import Footer from "../../components/Footer";
 
 // --- Category Data ---
 const PRODUCT_CATEGORIES = [
@@ -68,7 +67,7 @@ const PRODUCT_CATEGORIES = [
     ],
   },
   {
-    title: "GoFloat Tech Suite",
+    title: "GoFloat AI",
     products: [
       {
         name: "SonarIQ Suite",
@@ -83,19 +82,19 @@ const PRODUCT_CATEGORIES = [
           "Open plugin SDK",
         ],
       },
-      {
-        name: "AUV-Seeker X1",
-        image: "/images/product-auv.jpg",
-        summary: "Autonomous underwater vehicle for recon and mapping.",
-        description:
-          "Seeker X1 delivers long-endurance autonomous reconnaissance with adaptive mission planning and sonar fusion for high-fidelity mapping.",
-        highlights: [
-          "24h endurance · 200m depth",
-          "Multi-beam sonar + INS",
-          "Swarm/co-op capable",
-          "Hot-swap battery pods",
-        ],
-      },
+      // {
+      //   name: "AUV-Seeker X1",
+      //   image: "/images/product-auv.jpg",
+      //   summary: "Autonomous underwater vehicle for recon and mapping.",
+      //   description:
+      //     "Seeker X1 delivers long-endurance autonomous reconnaissance with adaptive mission planning and sonar fusion for high-fidelity mapping.",
+      //   highlights: [
+      //     "24h endurance · 200m depth",
+      //     "Multi-beam sonar + INS",
+      //     "Swarm/co-op capable",
+      //     "Hot-swap battery pods",
+      //   ],
+      // },
     ],
   },
 ];
@@ -133,7 +132,7 @@ export default function ProductsPage() {
           ))}
         </div>
       </main>
-      <Footer />
+      
       <ProductModal open={open} onClose={onClose} product={active} />
     </>
   );
