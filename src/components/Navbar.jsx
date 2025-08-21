@@ -21,20 +21,20 @@ export default function Navbar() {
       `}
     >
       <nav className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo / Brand */}
         <div className="flex items-center gap-3">
           <div className="size-9 rounded-xl bg-brand/20 border border-brandRing shadow-glow" />
-          <span className="text-heading font-semibold tracking-wide text-lg drop-shadow-[0_0_6px_rgba(6,182,212,0.6)]">
-            OceanLabs
+          <span className="text-heading font-bold tracking-wide text-lg drop-shadow-[0_0_6px_rgba(6,182,212,0.6)] uppercase">
+            GOFLOAT <span className="text-brand">TECHNOLOGIES</span>
           </span>
         </div>
 
         {/* Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm">
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           {[
             { name: "Home", href: "/" },
             { name: "Products", href: "/products" },
-            { name: "About", href: "#about" },
+            { name: "About", href: "/about" },
             { name: "Contact", href: "#contact" },
           ].map((item) => (
             <Link
@@ -47,16 +47,6 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="flex items-center gap-3">
-          <a href="#contact" className="ocean-outline">
-            Talk to us
-          </a>
-          <a href="/products" className="ocean-button sonar-glow">
-            Explore
-          </a>
         </div>
       </nav>
     </header>
