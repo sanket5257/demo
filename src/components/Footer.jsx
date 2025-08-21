@@ -72,13 +72,13 @@ export default function Footer() {
               <MapPin className="w-10 h-10" />
               <span>6th Floor,Agnel Technical Complex,Sector 9A,Vashi, Navi Mumbai, Maharashtra 400703</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center  hover:text-brand/90 cursor-pointer transition gap-2">
               <Phone className="w-4 h-4" />
-              <span>+91 82374 64373</span>
+              <a  href="tel:+9182374 64373">+91 82374 64373</a>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center  hover:text-brand/90 cursor-pointer transition gap-2">
               <Mail className="w-4 h-4" />
-              <span>info@gofloat.tech</span>
+              <a href="mailto:info@gofloat.tech">info@gofloat.tech</a>
             </div>
           </div>
           <div className="flex gap-4">
