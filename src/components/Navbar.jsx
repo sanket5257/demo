@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     onScroll();
@@ -12,21 +13,50 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all ${scrolled ? "bg-[#0D202A]/80 backdrop-blur border-b border-borderdark" : "bg-transparent"}`}>
-      <nav className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500
+        bg-gradient-to-b from-deepsea/40 to-transparent 
+        backdrop-blur-md border-b border-brandRing/10
+        ${scrolled ? "backdrop-blur-xl border-brandRing/20" : ""}
+      `}
+    >
+      <nav className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className="size-8 rounded-lg bg-brand/20 border border-brandRing" />
-          <span className="text-heading font-semibold tracking-wide">OceanLabs</span>
+          <div className="size-9 rounded-xl bg-brand/20 border border-brandRing shadow-glow" />
+          <span className="text-heading font-semibold tracking-wide text-lg drop-shadow-[0_0_6px_rgba(6,182,212,0.6)]">
+            OceanLabs
+          </span>
         </div>
-        <div className="hidden md:flex items-center gap-6 text-sm">
-          <Link href="/" className="hover:text-heading">Home</Link>
-          <Link href="/products" className="hover:text-heading">Products</Link>
-          <a href="#about" className="hover:text-heading">About</a>
-          <a href="#contact" className="hover:text-heading">Contact</a>
+
+        {/* Links */}
+        <div className="hidden md:flex items-center gap-8 text-sm">
+          {[
+            { name: "Home", href: "/" },
+            { name: "Products", href: "/products" },
+            { name: "About", href: "#about" },
+            { name: "Contact", href: "#contact" },
+          ].map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="relative text-body hover:text-heading transition-colors 
+                         after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-0 
+                         after:bg-brand after:transition-all hover:after:w-full"
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
+
+        {/* CTA */}
         <div className="flex items-center gap-3">
-          <a href="#contact" className="ocean-outline">Talk to us</a>
-          <a href="/products" className="ocean-button">Explore</a>
+          <a href="#contact" className="ocean-outline">
+            Talk to us
+          </a>
+          <a href="/products" className="ocean-button sonar-glow">
+            Explore
+          </a>
         </div>
       </nav>
     </header>

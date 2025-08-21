@@ -1,25 +1,93 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function Fields() {
   const items = [
-    { title: "Underwater Defence", desc: "Autonomous surveillance, threat detection and countermeasures." },
-    { title: "AI & Autonomy", desc: "Real-time perception, control loops and mission planning." },
-    { title: "Search & Rescue", desc: "Rapid deployment, comms relays and surface beacons." },
-    { title: "Data & Analytics", desc: "Sonar fusion, bathymetry, and geospatial insights." },
+    {
+      title: "Underwater Defence",
+      desc: "Autonomous surveillance, threat detection and countermeasures.",
+    },
+    {
+      title: "AI & Autonomy",
+      desc: "Real-time perception, control loops and mission planning.",
+    },
+    {
+      title: "Search & Rescue",
+      desc: "Rapid deployment, comms relays and surface beacons.",
+    },
+    {
+      title: "Data & Analytics",
+      desc: "Sonar fusion, bathymetry, and geospatial insights.",
+    },
   ];
-  return (
-    <section id="fields" className="relative py-20 bg-oceanGrad border-t border-borderdark">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-semibold text-heading">Four pillars of our work</h2>
-        <p className="mt-3 max-w-2xl text-muted">Consistent patterns, minimal whitespace, and a deep-sea interface.</p>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+  // Variants for staggered children
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+
+  const card = {
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 80, damping: 12 },
+    },
+  };
+
+  return (
+    <section
+      id="fields"
+      className="relative py-20 bg-oceanGrad border-t border-borderdark"
+    >
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-semibold text-heading"
+        >
+          Four pillars of our work
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-3 max-w-2xl text-muted"
+        >
+          Consistent patterns, minimal whitespace, and a deep-sea interface.
+        </motion.p>
+
+        {/* Animated Cards */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
           {items.map((it) => (
-            <div key={it.title} className="ocean-card p-6 hover:bg-raised/90 transition-colors">
+            <motion.div
+              key={it.title}
+              variants={card}
+              whileHover={{ y: -6, scale: 1.03 }}
+              className="ocean-card p-6 transition-all cursor-pointer"
+            >
               <div className="size-10 rounded-lg bg-brand/20 border border-brandRing mb-4" />
               <h3 className="text-heading font-semibold">{it.title}</h3>
               <p className="mt-2 text-sm text-body">{it.desc}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
