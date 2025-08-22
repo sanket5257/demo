@@ -27,7 +27,7 @@ export default function ContactPage() {
             </div>
             <div className="flex items-center gap-4">
               <Phone className="w-6 h-6 text-brand" />
-              <a href="tel:+918237464373" className="hover:text-brand transition">
+              <a href="tel:+9182374 64373" className="hover:text-brand transition">
                 +91 82374 64373
               </a>
             </div>
