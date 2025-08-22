@@ -16,7 +16,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Products", href: "/products" },
+    { name: "Contact", href: "/contact" },
     { name: "About", href: "/about" },
   ];
 
@@ -80,7 +80,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="tel:+9182374 64373"
+              href="tel:+918433938384"
               className="px-6 py-2 bg-brand text-white rounded-lg shadow hover:bg-brand/90 transition"
             >
               Call Now

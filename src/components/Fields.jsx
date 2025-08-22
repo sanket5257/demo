@@ -5,7 +5,7 @@ import { FishSymbol, Activity, Search, BarChart } from "lucide-react";
 export default function Fields() {
   const items = [
     {
-      title: "Underwater Defence",
+      title: "Underwater Robotics for Defence",
       desc: "Autonomous surveillance, threat detection and countermeasures.",
       icon: <FishSymbol className="size-10 text-brand" />,
     },

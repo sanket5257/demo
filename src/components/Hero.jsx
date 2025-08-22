@@ -28,7 +28,7 @@ export default function Hero() {
         >
           GOFLOAT <br />
           TECHNOLOGIES <br />
-          PVT. LTD.
+        
         </motion.h1>
 
         <motion.p
@@ -55,9 +55,9 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-8 flex items-center justify-center gap-4"
         >
-          <a href="/products" className="ocean-button sonar-glow">
+          {/* <a href="/products" className="ocean-button sonar-glow">
             Explore Our Products
-          </a>
+          </a> */}
           <a href="/about" className="ocean-outline">
             Learn More
           </a>
