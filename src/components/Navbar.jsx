@@ -33,7 +33,7 @@ export default function Navbar() {
                   <img className="size-10" src="/images/gofloatlogo.png" alt="" />
 
           <span className="text-heading font-bold tracking-wide text-lg drop-shadow-[0_0_6px_rgba(6,182,212,0.6)] uppercase">
-            GOFLOAT 
+            GOFLOAT <span className="text-brand"> TECHNOLOGIES</span>
           </span>
         </div>
 
