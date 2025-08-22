@@ -52,7 +52,7 @@ export default function Navbar() {
           ))}
           {/* Call Now Button */}
           <a
-            href="tel:+1234567890"
+            href="tel:+918433938384"
             className="ml-4 px-4 py-2 bg-brand text-white rounded-lg shadow hover:bg-brand/90 transition"
           >
             Call Now
