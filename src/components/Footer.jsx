@@ -15,13 +15,34 @@ export default function Footer() {
             Pioneering the future of underwater defense and surveillance systems.
           </p>
         </div>
+        {/* Column 2 - Products */}
+        <div>
+          <h4 className="text-heading font-semibold mb-3">Products</h4>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <a href="/products" className="hover:text-brand transition">
+                GoFloat Defence
+              </a>
+            </li>
+            <li>
+              <a href="/products" className="hover:text-brand transition">
+                GoFloat LSA
+              </a>
+            </li>
+            <li>
+              <a href="/products" className="hover:text-brand transition">
+                GoFloat AI
+              </a>
+            </li>
+          </ul>
+        </div>
 
         {/* Column 2 - Quick Links */}
         <div className="">
           <h4 className="text-heading font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="/" className="hover:text-brand transition">Home</a></li>
-            {/* <li><a href="/product" className="hover:text-brand transition">Product</a></li> */}
+            <li><a href="/product" className="hover:text-brand transition">Product</a></li>
             <li><a href="/about" className="hover:text-brand transition">About</a></li>
             <li><a href="#contact" className="hover:text-brand transition">Contact</a></li>
           </ul>
